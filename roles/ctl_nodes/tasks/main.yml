@@ -1,0 +1,3 @@
+- name: Deploy kube-vip for apiserver_endpoint
+  include_tasks: kube_vip.yml
+  when: inventory_hostname == groups['ctl_node'][0]

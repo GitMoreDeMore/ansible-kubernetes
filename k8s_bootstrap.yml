@@ -1,0 +1,9 @@
+---
+- hosts: all
+
+  roles:
+    # - role: _pretasks
+    #   tags: [ _pretasks, always ]
+    - role: ctl_node
+      tags: [ ctl_node ]
+      when: inventory_hostname in groups.ctl_node
